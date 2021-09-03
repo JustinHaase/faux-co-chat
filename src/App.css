@@ -314,3 +314,106 @@
   background-repeat: no-repeat;
   background-position: center;
 }
+
+.calendar-container {
+  height: 100%;
+  width: calc(100% - 36px);
+  text-align: center;
+  background-color: #e7a53c;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* .digitalresources-container {
+  height: 200px;
+  width: calc(100% - 36px);
+  text-align: center;
+  background-color: grey;
+  background-repeat: no-repeat;
+  background-position: center;
+} */
+
+/* .chatApp {
+  display: flex;
+} */
+
+/*popup styling*/
+* {
+  box-sizing: border-box;
+}
+
+.open-button {
+  background-color: #555;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.form-popup {
+  display: none;
+  width: 300px;
+  bottom: 0;
+  right: 15px;
+  z-index: 9;
+}
+
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+
+.form-container input[type="text"],
+.form-container input[type="url"] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+.form-container input[type="text"]:focus,
+.form-container input[type="url"]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+.form-container .btn {
+  background-color: #04aa6d;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom: 10px;
+  opacity: 0.8;
+}
+
+.form-container .cancel {
+  background-color: red;
+}
+
+.form-container .btn:hover,
+.open-button:hover {
+  opacity: 1;
+}
+.card {
+  position: relative;
+  width: 200px;
+  height: 50px;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.25);
+  background-color: red;
+  z-index: 15;
+}
+.yes {
+  background-color: red;
+}
+.digital-resources-container {
+  height: 100%;
+  background-color: #e7a53c;
+}
+.addResource {
+  width: 300px;
+}
