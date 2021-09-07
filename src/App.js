@@ -1,4 +1,6 @@
 import { useState } from "react";
+import React from "react";
+import ReactDOM from 'react-dom';
 import { ChatEngine } from "react-chat-engine";
 import { ChatList } from "react-chat-engine";
 // import { ChatSettings } from "react-chat-engine";
@@ -36,31 +38,43 @@ const App = () => {
     document.getElementById("myForm").style.display = "none";
   }
 
-  function createCard() {
-    document.createElement("div");
-    card.classList.add("card");
-    card.innerHTML =
-    '<span className="yes"></span>';
-    document.body.appendChild(card);
-    
-  }
-
+  // const newCard = document.createElement('div');
+  // const newText = document.createTextNode('');
+  // newCard.appendChild(newText);
+  // const position = document.getElementsById("resource")[0];
+  // position.appendChild(newCard);
   const formWindowOpen = () => {
     openForm();
   }
   const formWindowClose = () => {
     closeForm();
   }
-  const formCreateCard = () => {
+  const formCreateCard = (event) => {
+    event.preventDefault();
     createCard();
   }
-  const card = "card";
+  
+  // function card (props) {
+  //   const nameEl = React.useRef(null);
+  //   const handleSubmit = e => {
+  //     e.preventDefault();
+  //     alert(nameEl.current.value);
+  //   };
+
+  function createCard() {
+    const element = React.createElement('div', {
+      className: 'card'
+  }, ['Hello!'])
+  ReactDOM.render(element, document.getElementById('list'));
+  // const position = document.getElementsById('list')[0];
+  // position.appendChild('card');
+  }
+
+
   //<---digital resource form and card creation***//
 
 
   return (
-
-
     <div className= "chatApp">
       <ChatEngine
         height="100vh"
@@ -94,6 +108,7 @@ const App = () => {
       </div>
     </div>
   );
-};
+}
+
 
 export default App;

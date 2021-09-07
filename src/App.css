@@ -356,7 +356,8 @@
   width: 300px;
   bottom: 0;
   right: 15px;
-  z-index: 9;
+  z-index: 20;
+  position: fixed;
 }
 
 .form-container {
@@ -404,6 +405,7 @@
   width: 200px;
   height: 50px;
   box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
   background-color: red;
   z-index: 15;
 }
@@ -413,7 +415,14 @@
 .digital-resources-container {
   height: 100%;
   background-color: #e7a53c;
+  position: relative;
 }
 .addResource {
   width: 300px;
+}
+
+#list {
+  height: 100%;
+  width: 100%;
+  background-color: aquamarine;
 }
